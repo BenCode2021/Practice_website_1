@@ -1,0 +1,22 @@
+body
+{
+          background-color: rgb(207, 144, 8);
+}
+h1
+{
+          font-size: 50px;
+          font-family: 'Courier New', Courier, monospace;
+          text-align: center;
+          padding: 10px 20px 10px 20px;
+          background-color: rgb(77, 0, 0);
+          color: white;
+          border: solid white 10px;
+}
+p
+{
+          color: rgb(57, 245, 182);
+}
+address
+{
+          color: rgb(77,0,0);
+}
