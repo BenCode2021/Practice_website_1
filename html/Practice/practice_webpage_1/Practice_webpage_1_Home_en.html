@@ -3,10 +3,10 @@
           <head>
                     <title>Doge_pic</title>
                     <link rel="stylesheet" href="./Practice_webpage_1_Home.css">
-                    <link rel="icon" href="./image_bin/doge_meme_pic.jpg">
+                    <link rel="icon" href="./image_bin/website_1_icon.jpg">
           </head>
           <body>
-                    <h1>This is a web page for doge pics!!</h1>
+                    <h1>This web page is filled with pictures of strips</h1>
                     <ul id="menu">
                               <li><a href="Practice_webpage_1_Home_en.html">Home</a></li><li><a>about</a></li>
                     </ul>
@@ -15,6 +15,11 @@
                     <address>send to email : <a href="mailto: bencode2021@gmail.com">bencode2021@gmail.com</a></address>
                     <p title="language select">Language : English <a href="./Practice_webpage_1_Home_ch.html">中文</a></p>
                     <script>
+                              /*
+                              works in pairs of images where when hovered the image will change 
+                              to the the same file name with a "-T" in the end, and change back
+                              after the mouse has left the image.
+                              */
                               function img_hover(element){
                                         var url = document.getElementById(element.id).src;
                                         var name =url.split(".jpg")[0]+"-T.jpg";
