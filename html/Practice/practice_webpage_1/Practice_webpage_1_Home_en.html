@@ -10,20 +10,19 @@
                     <ul id="menu">
                               <li><a href="Practice_webpage_1_Home_en.html">Home</a></li><li><a>about</a></li>
                     </ul>
-                    <img id="2022-03-13_1"src="../image_bin/2022-03-13_1.jpg" alt="2022-03-13" onmouseover="img_hover(this)" onmouseout="img_unhover(this)">
+                    <img id="2022-03-13_1"src="../image_bin/2022-03-13_1.jpg" alt="2022-03-13" onmouseover="img_hover(this);" onmouseout="img_unhover(this);">
                     <p>Send us more doge pics so we can add it to our collection!</p>
                     <address>send to email : <a href="mailto: bencode2021@gmail.com">bencode2021@gmail.com</a></address>
                     <p title="language select">Language : English <a href="./Practice_webpage_1_Home_ch.html">中文</a></p>
-                    <p id="test">test</p>
                     <script>
                               function img_hover(element){
-                                        var url = document.getElementById("2022-03-13_1").src;
-                                        var name = "../image_bin/"+url.substring(url.indexOf("20"),url.lastIndexOf(".jpg"))+"-T.jpg";
+                                        var url = document.getElementById(element.id).src;
+                                        var name =url.split(".jpg")[0]+"-T.jpg";
                                         element.setAttribute("src",name);
                               }
                               function img_unhover(element){
-                                        var url = document.getElementById("2022-03-13_1").src;
-                                        var name = "../image_bin/"+url.substring(url.indexOf("20"),url.lastIndexOf(".jpg")-2)+".jpg";
+                                        var url = document.getElementById(element.id).src;
+                                        var name =url.split("-T.jpg")[0]+".jpg";
                                         element.setAttribute("src",name);
                               }
                     </script>

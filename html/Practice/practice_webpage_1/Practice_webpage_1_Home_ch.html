@@ -16,13 +16,13 @@
                     <p title="language select">語言 : 中文 <a href="./Practice_webpage_1_Home_en.html">Engish</a></p>
                     <script>
                               function img_hover(element){
-                                        var url = document.getElementById("2022-03-13_1").src;
-                                        var name = "../image_bin/"+url.substring(url.indexOf("20"),url.lastIndexOf(".jpg"))+"-T.jpg";
+                                        var url = document.getElementById(element.id).src;
+                                        var name =url.split(".jpg")[0]+"-T.jpg";
                                         element.setAttribute("src",name);
                               }
                               function img_unhover(element){
-                                        var url = document.getElementById("2022-03-13_1").src;
-                                        var name = "../image_bin/"+url.substring(url.indexOf("20"),url.lastIndexOf(".jpg")-2)+".jpg";
+                                        var url = document.getElementById(element.id).src;
+                                        var name =url.split("-T.jpg")[0]+".jpg";
                                         element.setAttribute("src",name);
                               }
                     </script>
