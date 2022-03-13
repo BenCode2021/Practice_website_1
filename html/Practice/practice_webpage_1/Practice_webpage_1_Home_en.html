@@ -6,14 +6,26 @@
                     <link rel="icon" href="./image_bin/doge_meme_pic.jpg">
           </head>
           <body>
-                    <ul id="menu">
-                              <li><a>Home</a></li><li><a>about</a></li>
-                    </ul>
                     <h1>This is a web page for doge pics!!</h1>
-                    <hr>
-                    <img src="../image_bin/doge_meme_pic.jpg" alt="doge pic" width="500" height="300">
+                    <ul id="menu">
+                              <li><a href="Practice_webpage_1_Home_en.html">Home</a></li><li><a>about</a></li>
+                    </ul>
+                    <img id="2022-03-13_1"src="../image_bin/2022-03-13_1.jpg" alt="2022-03-13" onmouseover="img_hover(this)" onmouseout="img_unhover(this)">
                     <p>Send us more doge pics so we can add it to our collection!</p>
                     <address>send to email : <a href="mailto: bencode2021@gmail.com">bencode2021@gmail.com</a></address>
                     <p title="language select">Language : English <a href="./Practice_webpage_1_Home_ch.html">中文</a></p>
+                    <p id="test">test</p>
+                    <script>
+                              function img_hover(element){
+                                        var url = document.getElementById("2022-03-13_1").src;
+                                        var name = "../image_bin/"+url.substring(url.indexOf("20"),url.lastIndexOf(".jpg"))+"-T.jpg";
+                                        element.setAttribute("src",name);
+                              }
+                              function img_unhover(element){
+                                        var url = document.getElementById("2022-03-13_1").src;
+                                        var name = "../image_bin/"+url.substring(url.indexOf("20"),url.lastIndexOf(".jpg")-2)+".jpg";
+                                        element.setAttribute("src",name);
+                              }
+                    </script>
           </body>
 </html>
