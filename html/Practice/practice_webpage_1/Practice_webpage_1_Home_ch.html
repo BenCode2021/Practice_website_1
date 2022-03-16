@@ -1,34 +1,41 @@
 <!DOCTYPE html>
-<html lang="ch-TW">
+<html lang="en-US">
           <head>
-                    <title>Doge_pic</title>
+                    <title>Stripes</title>
                     <link rel="stylesheet" href="./Practice_webpage_1_Home.css">
                     <link rel="icon" href="../image_bin/Practice_website_1_icon.ico">
           </head>
           <body>
-                    <h1>這個網站充滿STRIPS的照片</h1>
+                    <h1 class="website_title">這個網站充滿STRIPS的照片</h1>
                     <ul id="menu">
                               <li><a href="Practice_webpage_1_Home_ch.html">首頁</a></li><li><a>關於</a></li>
                     </ul>
-                    <img id="2022-03-13_1"src="../image_bin/2022-03-13_1.jpg" alt="2022-03-13" onmouseover="img_hover(this)" onmouseout="img_unhover(this)">
-                    <p>寄給我們更多的狗狗圖，讓收藏集增加</p>
-                    <address>寄到email : <a href="mailto: bencode2021@gmail.com">bencode2021@gmail.com</a></address>
-                    <p title="language select">語言 : 中文 <a href="./Practice_webpage_1_Home_en.html">Engish</a></p>
+                    <div class="img_bank" onmouseover="img_hover(this)" onmouseout="img_unhover(this)" ><div><strong>place_holder</strong></div><img id="2022-03-13_1"src="../image_bin/2022-03-13_1.jpg"></div>
+                    <div class="img_bank" onmouseover="img_hover(this)" onmouseout="img_unhover(this)" ><div><strong>place_holder</strong></div><img id="2022-03-14_1"src="../image_bin/2022-03-14_1.jpg"></div>
+                    <div class="img_bank" onmouseover="img_hover(this)" onmouseout="img_unhover(this)" ><div><strong>place_holder</strong></div><img id="2022-03-14_2"src="../image_bin/2022-03-14_2.jpg"></div>
+                    <div class="bottom_tab">
+                              <address>郵件信箱: <a href="mailto: bencode2021@gmail.com">bencode2021@gmail.com</a></address>
+                              <p title="language select" style="float: right;">語言 : 中文 <a href="./Practice_webpage_1_Home_en.html">English</a></p>
+                    </div>
                     <script>
                               /*
-                              works in pairs of images where when hovered the image will change 
-                              to the the same file name with a "-T" in the end, and change back
-                              after the mouse has left the image.
+                              img_hover make the div visable , then gets the image size and change 
+                              the div size to the same, then insert the name of the image which is 
+                              the date of the photo taken in this instence.
                               */
                               function img_hover(element){
-                                        var url = document.getElementById(element.id).src;
-                                        var name =url.split(".jpg")[0]+"-T.jpg";
-                                        element.setAttribute("src",name);
+                                        var wid=element.childNodes[1].width;
+                                        var hgt=element.childNodes[1].height;
+                                       element.childNodes[0].style.display="block";
+                                       element.childNodes[0].childNodes[0].innerHTML=element.childNodes[1].src.split("/").pop().split("_")[0];
+                                       element.childNodes[0].style.width=wid+"px";
+                                       element.childNodes[0].style.height=hgt+"px";
+                                       element.childNodes[0].style.textAlign="center";
+                                       element.childNodes[0].style.lineHeight=hgt+"px";
+                                       element.childNodes[0].style.lineWidth=wid+"px";
                               }
                               function img_unhover(element){
-                                        var url = document.getElementById(element.id).src;
-                                        var name =url.split("-T.jpg")[0]+".jpg";
-                                        element.setAttribute("src",name);
+                                       element.childNodes[0].style.display="none";
                               }
                     </script>
           </body>
